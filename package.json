@@ -4,7 +4,7 @@
     "description": "simple messenger bot",
     "main": "",
     "scripts": {
-        "start": "node --trace-warnings --use_strict --async-stack-traces Robiul/catalogs/Robiula.js",
+        "start": "node --trace-warnings --use_strict --async-stack-traces Joy/catalogs/Joya.js",
         "login": "node login",
         "test": "node --trace-warnings --use_strict --async-stack-traces main"
     },
@@ -15,7 +15,7 @@
         "@google/generative-ai": "^0.21.0",
         "@xaviabot/fb-downloader": "^1.0.14",
         "aes-js": "latest",
-        "axios": "^1.4.0",
+        "axios": "latest",
         "bluebird": "^2.11.0",
         "canvas": "^2.11.0",
         "chalk": "4.1.2",
@@ -68,11 +68,10 @@
         "totp-generator": "^0.0.13",
         "tweetnacl-sealedbox-js": "^1.2.0",
         "tweetnacl-util": "^0.15.1",
-        "url": "^0.11.3",
         "websocket-stream": "latest",
         "wikijs": "^6.4.1",
         "youtube-search-api": "^1.1.1",
-        "youtube-search-api": "^1.1.1",
+        "yt-search": "^2.12.1",
         "ytdl-core": "^4.11.4"
     }
 }
