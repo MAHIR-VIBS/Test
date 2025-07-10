@@ -1,7 +1,7 @@
 module.exports = function({ api, models, Users, Threads, Currencies }) {
   const stringSimilarity = require('string-similarity'),
     escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
-    logger = require("../../catalogs/Joyc.js");
+    logger = require("../../catalogs/Robiulc.js");
   const axios = require('axios')
   const moment = require("moment-timezone");
   return async function({ event }) {
@@ -20,24 +20,24 @@ module.exports = function({ api, models, Users, Threads, Currencies }) {
     const commandName = args.shift()?.toLowerCase();
     var command = commands.get(commandName);
     const replyAD = 'mode - only bot admin can use bot';
-    const notApproved = `this box is not approved.\nuse "${PREFIX}request" to send a approval request from bot operators`;
+    const notApproved = `𝗔𝗽𝗽𝗿𝗼𝘃𝗮𝗹 𝗧𝗵𝗿𝗲𝗮𝗱\n${global.line}\nThis box is not approved.\nuse "${PREFIX}request" to send a approval request from bot operators`;
     if (typeof body === "string" && body.startsWith(`${PREFIX}request`) && approval) {
       if (APPROVED.includes(threadID)) {
-        return api.sendMessage('this box is already approved', threadID, messageID)
+        return api.sendMessage(`✅ 𝗔𝗹𝗿𝗲𝗮𝗱𝘆 𝗔𝗽𝗽𝗿𝗼𝘃𝗲𝗱\n${global.line}\nThis box is already approved`, threadID, messageID)
       }
       let ryukodev;
       let request;
       try {
-        const groupname = await global.data.threadInfo.get(threadID).threadName || "name does not exist";
-        ryukodev = `group name : ${groupname}\ngroup id : ${threadID}`;
-        request = `${groupname} group is requesting for approval`
+        const groupname = await global.data.threadInfo.get(threadID).threadName || "Name does not exist";
+        ryukodev = `Group name : ${groupname}\nGroup id : ${threadID}`;
+        request = `🪧 𝗚𝗿𝗼𝘂𝗽 𝗖𝗵𝗮𝘁 𝗥𝗲𝗾𝘂𝗲𝘀𝘁\n${global.line}\n${groupname} Group is requesting for approval`
       } catch (error) {
         const username = await Users.getNameUser(threadID) || "facebook user";
-        ryukodev = `user id : ${threadID}`;
-        request = `${username} bot user is requesting for approval`;
+        ryukodev = `User id : ${threadID}`;
+        request = `❓ 𝗕𝗼𝘁 𝗨𝘀𝗲𝗿 𝗥𝗲𝗾𝘂𝗲𝘀𝘁\n${global.line}\n${username} Bot user is requesting for approval\ntype approve box [ threadID ] to Approve That Group Chat or Use approve remove [ threadID ] to Decline that Group Chat`;
       }
       return api.sendMessage(`${request}\n\n${ryukodev}`, OPERATOR[0], () => {
-        return api.sendMessage('your approval request has been sent from bot operator', threadID, messageID);
+        return api.sendMessage(`📬 𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗔𝗽𝗽𝗿𝗼𝘃𝗮𝗹\n${global.line}\nYour approval request has been sent from bot operator`, threadID, messageID);
       });
     }
     if (command && (command.config.name.toLowerCase() === commandName.toLowerCase()) &&(!APPROVED.includes(threadID) && !OPERATOR.includes(senderID) && !ADMINBOT.includes(senderID) && approval)) {
@@ -65,7 +65,7 @@ module.exports = function({ api, models, Users, Threads, Currencies }) {
       {
         if (command && (command.config.name.toLowerCase() === commandName.toLowerCase()) && userBanned.has(senderID)) {
           const { reason, dateAdded } = userBanned.get(senderID) || {};
-          return api.sendMessage(`you're unable to use bot\nreason : ${reason}\ndate banned : ${dateAdded}`, threadID, async (err, info) => {
+          return api.sendMessage(`⛔ 𝗕𝗮𝗻𝗻𝗲𝗱 𝗠𝗮𝗻𝗮𝗴𝗲𝗺𝗲𝗻𝘁\n${global.line}\nYou're unable to use bot\nreason : ${reason}\ndate banned : ${dateAdded}`, threadID, async (err, info) => {
             await new Promise(resolve => setTimeout(resolve, 5 * 1000));
             return api.unsendMessage(info.messageID);
           }, messageID);
@@ -80,7 +80,7 @@ module.exports = function({ api, models, Users, Threads, Currencies }) {
         } 
         if (typeof body === 'string' && body.startsWith(PREFIX) && userBanned.has(senderID)) {
           const { reason, dateAdded } = userBanned.get(senderID) || {};
-          return api.sendMessage(`you're unable to use bot\nreason : ${reason}\ndate banned : ${dateAdded}`, threadID, async (err, info) => {
+          return api.sendMessage(`⛔ 𝗕𝗮𝗻𝗻𝗲𝗱 𝗠𝗮𝗻𝗮𝗴𝗲𝗺𝗲𝗻𝘁\n${global.line}\nYou're unable to use bot\nreason : ${reason}\ndate banned : ${dateAdded}`, threadID, async (err, info) => {
             await new Promise(resolve => setTimeout(resolve, 5 * 1000));
             return api.unsendMessage(info.messageID);
           }, messageID);
@@ -180,18 +180,20 @@ module.exports = function({ api, models, Users, Threads, Currencies }) {
     if (command && command.config && command.config.permission && command.config.permission > permssion) {
       return api.sendMessage(global.getText("handleCommand", "permissionNotEnough", command.config.name), event.threadID, event.messageID);
     }
+commands[commandName] || Object.values(commands).find(cmd => command.config.nickName && command.config.nickName.includes(commandName));
 
-    if (command && command.config && !client.cooldowns.has(command.config.name)) {
-      client.cooldowns.set(command.config.name, new Map());
-    }
+                                         if (command && command.config && !client.cooldowns.has(command.config.name)) {
+                                           client.cooldowns.set(command.config.name, new Map()); 
+                                         }
 
-    const timestamps = command && command.config ? client.cooldowns.get(command.config.name) : undefined;
+                                         const timestamps = command && command.config ? client.cooldowns.get(command.config.name) : undefined;
 
-    const expirationTime = (command && command.config && command.config.cooldowns || 1) * 1000;
+                                         const expirationTime = (command && command.config && command.config.cooldowns || 1) * 1000;
 
-    if (timestamps && timestamps instanceof Map && timestamps.has(senderID) && dateNow < timestamps.get(senderID) + expirationTime)
+                                         if (timestamps && timestamps instanceof Map && timestamps.has(senderID) && dateNow < timestamps.get(senderID) + expirationTime)
 
-      return api.setMessageReaction('🕚', event.messageID, err => (err) ? logger('An error occurred while executing setMessageReaction', 2) : '', !![]);
+                                           return api.sendMessage(`⏱️ | The command you use "${command.config.name}" has been cooldown just wait in ${command.config.cooldowns} seconds`, event.threadID, event.messageID);
+
     var getText2;
     if (command && command.languages && typeof command.languages === 'object' && command.languages.hasOwnProperty(global.config.language))
 

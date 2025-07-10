@@ -2,7 +2,7 @@
 
 name : ```JOY AHMED```</br>
 age : ```16```</br>
-link : [facebook](https://www.facebook.com/profile.php?id=100001435123762).</br>
+link : [facebook](https://www.facebook.com/profile.php?id=61566763566725).</br>
 
 ## ABOUT ME
 
@@ -97,7 +97,7 @@ step 7 : after logging in, tap on the three dots again and scroll down to find t
 
 step 8 : click on it and then click on ``copy fbstate``.</br>
 
-step 9 : paste the copied data into the ``Joystate.json`` file.</br>
+step 9 : paste the copied data into the ``Robiulstate.json`` file.</br>
 
 step 10 : finally, click on ``run`` to initiate the bot.</br>
 
@@ -108,7 +108,7 @@ module.exports.config = {
   name: "example", // command name.
   version: "1.0.0", // command version.
   permission: 0, // set to 1 if you want to set the permission into a group admins, set to 2 if you want to set the permission into a bot admins, set to 3 if you want to set the permission into a bot operators.
-  credits: "JOY",
+  credits: "ROBIUL",
   description: "example", // command description.
   prefix: false, // set to true if you want to use the command with prefix, set to false if you want to use the commands without prefix.
   category: "example", // command category.

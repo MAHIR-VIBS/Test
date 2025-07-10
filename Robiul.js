@@ -2,7 +2,7 @@ module.exports = async ({ api, event }) => {
   const fonts = require('./utils/fonts');
   global.fonts = fonts;
   global.line = "━━━━━━━━━━━━━━━━━━";
-  const logger = require('./Joy/catalogs/Joyc.js')
+  const logger = require('./Robiul/catalogs/Robiulc.js')
   const fs = require("fs");
     const cron = require('node-cron');
   cron.schedule('0 3 * * *', () => {

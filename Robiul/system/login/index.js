@@ -3,7 +3,7 @@
 var utils = require("./utils");
 var cheerio = require("cheerio");
 var log = require('npmlog');
-const logger = require('../../catalogs/Joyc.js');
+const logger = require('../../catalogs/Robiulc.js');
 const chalk = require('chalk');
 var defaultLogRecordSize = 100;
 log.maxRecordSize = defaultLogRecordSize;

@@ -1,5 +1,5 @@
 {
-  "author": "JOY",
+  "author": "ROBIUL",
   "autoRestart": true,
   "accpetPending": false,
   "developermode": false,
@@ -9,18 +9,18 @@
   "saveState": true,
   "banMsg": false,
   "adminOnlyMsg": false,
-  "BOTNAME": "JOY-BOT",
+  "BOTNAME": "ROBIUL-BOT",
   "PREFIX": ".",
   "react": "🐸",
   "OPERATOR": [
     "",
-    "100001435123762"
+    "61566763566725"
   ],
   "ADMINBOT": [
-    "100001435123762",
-    ""
+    "",
+    "61566763566725"
   ],
-  "OWNER": ["100001435123762"], 
+  "OWNER": ["61566763566725"], 
   "APPROVED": [],
   "disabledcmds": [],
   "disabledevents": [],
