@@ -230,7 +230,7 @@ try {
     logger.error(`detected : author was changed at ${chalk.blueBright('package.json')}`);
     process.exit(0);
   }
-  if (packages.credit != "NAYANXIMRAN") {
+  if (packages.credit != "NAYAN&IMRAN") {
     logger.error(`detected : Credit was changed at ${chalk.blueBright('package.json')}`);
     process.exit(0);
   }
