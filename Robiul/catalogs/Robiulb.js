@@ -230,6 +230,10 @@ try {
     logger.error(`detected : author was changed at ${chalk.blueBright('package.json')}`);
     process.exit(0);
   }
+  if (packages.credit != "NAYANXIMRAN") {
+    logger.error(`detected : Credit was changed at ${chalk.blueBright('package.json')}`);
+    process.exit(0);
+  }
   if (packages.name != "Robiul") {
     logger.error(`detected : project name was changed at ${chalk.blueBright('package.json')}`);
     process.exit(0);
