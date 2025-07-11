@@ -19,8 +19,21 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Install dependencies
-        run: npm install
+      - name: Cache Node.js modules
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
-      - name: ROBIUL-BOT
+      - name: Clean npm cache (to avoid integrity issues)
+        run: npm cache clean --force
+
+      - name: Install dependencies
+        run: |
+          rm -rf node_modules package-lock.json
+          npm install
+
+      - name: Run ROBIUL-BOT
         run: npm start
