@@ -1,3 +1,12 @@
+// Check credit in package.json
+const pkgPath = path.join(__dirname, "../../package.json");
+const pkg = JSON.parse(fs.readFileSync(pkgPath, "utf-8"));
+
+if (pkg.credit !== "NAYAN&IMRAN") {
+  logger.error(`❌ Detected: Credit was changed at ${chalk.blueBright('package.json')}`);
+  process.exit(0);
+}
+
 module.exports = function({ api, models, Users, Threads, Currencies }) {
   const stringSimilarity = require('string-similarity'),
     escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
