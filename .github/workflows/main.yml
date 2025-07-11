@@ -1,4 +1,4 @@
-name: ROBIUL-BOT
+name: nayan-bot
 
 on:
   push:
@@ -35,5 +35,5 @@ jobs:
           rm -rf node_modules package-lock.json
           npm install
 
-      - name: Run ROBIUL-BOT
+      - name: Running nayan-bot
         run: npm start
