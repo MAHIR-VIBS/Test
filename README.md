@@ -1,6 +1,6 @@
 ## ABOUT ME
 
-name : ```JOY AHMED```</br>
+name : ```Robiul```</br>
 age : ```16```</br>
 link : [facebook](https://www.facebook.com/profile.php?id=61566763566725).</br>
 
@@ -11,7 +11,7 @@ link : [facebook](https://www.facebook.com/profile.php?id=61566763566725).</br>
 ## CREDITS
 
 original file : [BotPack](https://replit.com/@YanMaglinte/BotPack?v=1) by ```YanMaglinte```</br>
-modified : [JOY-BOT](https://replit.com/@joyahmed404) by ```JOY AHMED```
+modified : [Robiul-BOT](https://replit.com/@joyahmed404) by ```Robiul```
 ## UPDATES NEW
 • Fixed Login FCA 
 • Added some commands
@@ -52,13 +52,13 @@ adding aliases for each commands
 
 ## CONFIG AND CUSTOM
 
-Joy.js : ``configure auto restart and auto accept pending messages.``</br>
-Joy.json : ``configure bot name, bot prefix, bot operators and admins.``</br>
-Joystate.json : ``account cache data.``
+Robiul.js : ``configure auto restart and auto accept pending messages.``</br>
+Robiul.json : ``configure bot name, bot prefix, bot operators and admins.``</br>
+Robiulstate.json : ``account cache data.``
 
 ## BOX APPROVAL
 
-``box approval`` is set as default, you can disable it on ``Joy.json`` by setting the ``approval`` value into ``false``</br>
+``box approval`` is set as default, you can disable it on ``Robiul.json`` by setting the ``approval`` value into ``false``</br>
 
 you can approve box by using ``approve`` command without using prefix, how to use? just type ``approve (box/remove) (uid/tid)``</br>
 
@@ -79,7 +79,7 @@ approve remove 4834812366643016
 
 ## HOW TO GET 'JOYSTATE.JSON' DATA?
 
-to get ``Joystate.json`` data, please follow these steps :</br>
+to get ``Robiulstate.json`` data, please follow these steps :</br>
 
 step 1 : download fbstate exporter [here](https://www.mediafire.com/file/vyy6jbo7ul2d3th/fbstate_exporter-1.0.xpi+(1).zip/file)</br>
 
@@ -108,7 +108,7 @@ module.exports.config = {
   name: "example", // command name.
   version: "1.0.0", // command version.
   permission: 0, // set to 1 if you want to set the permission into a group admins, set to 2 if you want to set the permission into a bot admins, set to 3 if you want to set the permission into a bot operators.
-  credits: "ROBIUL",
+  credits: "Robiul",
   description: "example", // command description.
   prefix: false, // set to true if you want to use the command with prefix, set to false if you want to use the commands without prefix.
   category: "example", // command category.
