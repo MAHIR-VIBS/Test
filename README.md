@@ -24,7 +24,7 @@ modified : [Robiul-BOT](https://replit.com/@joyahmed404) by ```Robiul```
 
 ## OLD UPDATES
 
-• configure console output in ``Joy/configs/console.js``.</br>
+• configure console output in ``Robiul/configs/console.js``.</br>
 • fixed spam in ban system.</br>
 • discover the new feature with ```premium command```, you can enable it by adding a variable named ```premium``` and the value is boolean</br></br>
 ```premium ussage example```
