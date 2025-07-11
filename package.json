@@ -9,7 +9,7 @@
         "test": "node --trace-warnings --use_strict --async-stack-traces main"
     },
     "author": "Robiul",
-    "credit": "NAYAN&IMRANi",
+    "credit": "NAYAN&IMRAN",
     "license": "GPL-3.0",
     "dependencies": {
         "@distube/ytdl-core": "^4.15.1",
